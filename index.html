@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystal Collector</title>
+	
+    <!-- Link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Link to reset.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- Link to style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+<h1>Crystal Collector</h1>
+
+<main class="container row">
+	<section class="col-md-4" id="instructions">
+		<p>You will be given a random number at the start of the game.</p>	
+		<p>There are four crystals. Click on a crystal to add a specific amount of points to your total score.</p>
+		<p>Win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+		<p>Each crystal's value is hidden until you click on it. Each time the game (re)starts, the values of each crystal will change.</p>
+	</section>
+
+	<section class="col-md-8" id="game-action">
+		<div id="random-match-display"></div>
+
+		<div id="wl-counters">
+			<div id="win-display">Wins: 0</div>
+			<div id="loss-display">Losses: 0</div>
+		</div>
+
+		<div id="gem-imgs">
+			<img alt="aquamarine" src="assets/images/aqua.png">
+			<img alt="emerald" src="assets/images/emerald.png">
+			<img alt="ruby" src="assets/images/ruby.png">
+			<img alt="topaz" src="assets/images/topaz.png">
+		</div>
+
+		<!-- //ADD YOUR SCORE SECTION -->
+	</section>
+</main>
+</body>
+</html>
