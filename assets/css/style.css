@@ -38,18 +38,9 @@ h1 {
   	border-radius: 8px;
 }
 
-#game-action {
-	margin-top: 35px;
-}
-
-#random-match-display, #wl-counters {
-	position: relative;
-	float: left;
-}
-
 #gem-imgs {
-	position: relative;
-	float: right;	
+	margin-top: 30px;
+	text-align: center;
 }
 
 #gem-imgs > img:hover {
@@ -58,6 +49,7 @@ h1 {
 }
 
 #wl-counters {
+	/*position: relative;*/
 	padding: 10px 20px 15px 20px;
 	font-size: 20px;
 	font-weight: bold;
@@ -68,12 +60,11 @@ h1 {
 	color: #000;
 }
 
-#random-match-display {
-	width: 170px;
-	height: 170px;
-	margin: 0 20px;
+#random-match-display, #user-score {
+/*	position: relative;*/
+	height: 170px; 
+	width: 100%;
 	padding-top: 65px;
-	background-color: #8c1be2;
 	border-radius: 15px;
 	border: double 5px #0f0e10;
 	color: #000;
@@ -81,3 +72,7 @@ h1 {
 	font-size: 60px;
 	font-weight: bold;
 }
+
+#random-match-display {	background-color: #8c1be2;  } 
+
+#user-score {  background-color: #08676b  }  
