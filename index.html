@@ -6,6 +6,9 @@
     <!-- Link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
+    <!-- Link to the jQuery Library -->
+    <script src="assets/js/game.js"></script>
+
     <!-- Link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -33,25 +36,25 @@
 		<div class="row text-center">
 			<div class="col-md-4">
 				<div class="text-center"><strong>Match this Number</strong></div>
-				<div id="random-match-display">88</div>
+				<div id="random-match-display"></div>
 			</div>
 			<div class="col-md-4">
 				<div>&nbsp;</div>
 				<div id="wl-counters">
-					<div id="win-display" >Wins: 0</div>
-					<div id="loss-display">Losses: 0</div>
+					<div>Wins: <span id="win-display">0</span></div>
+					<div>Losses: <span id="loss-display">0</span></div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="text-center"><strong>Your Current Score</strong></div>
-				<div id="user-score">24</div>	
+				<div id="user-score"></div>	
 			</div>
 		</div>
 		<div id="gem-imgs">
-			<img alt="aquamarine" src="assets/images/aqua.png">
-			<img alt="emerald" src="assets/images/emerald.png">
-			<img alt="ruby" src="assets/images/ruby.png">
-			<img alt="topaz" src="assets/images/topaz.png">
+			<img alt="aquamarine" id="gem" src="assets/images/aqua.png">
+			<img alt="emerald" id="gem" src="assets/images/emerald.png">
+			<img alt="ruby" id="gem" src="assets/images/ruby.png">
+			<img alt="topaz" id="gem" src="assets/images/topaz.png">
 		</div>
 
 	</section>
