@@ -1,9 +1,10 @@
 body {
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'XXII ARABIAN-ONENIGHTSTAND', 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
   font-size: 15px;
   color: #fff;
   line-height: 30px;
-  background-color: #0f0e10;
+   background: #051630; 
 }
 
 * {
@@ -13,17 +14,22 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-family: 'XXII ARABIAN-ONENIGHTSTAND', 'Helvetica Neue', Helvetica, sans-serif;
   color: #ffff99;
   font-weight: bold;
   text-align: center;
 }
 
 h1 {
-  padding-bottom: 5px;
-  font-size: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 0;	
+  font-size: 45px;
+  text-transform: uppercase;
   line-height: 49px;
   font-weight: bold;
+
+
 }
 
 .container {
@@ -33,14 +39,27 @@ h1 {
 }
 
 #instructions {
-  	padding: 28px 31px 21px 35px;
-  	border: dotted 2px #ccc;
-  	border-radius: 8px;
+  	padding: 65px 31px 65px 35px;
+  	background-image: url(../images/scroll.png);
+  	background-size: 100% 100%;
+  	background-repeat: no-repeat;
+  	color: #000;	
+  	line-height: 25px;    
+}
+
+#instructions > p {
+	-ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+    transform: rotate(-3deg);
 }
 
 #gem-imgs {
 	margin-top: 30px;
 	text-align: center;
+}
+
+#gem-imgs > img {
+	height: 120px;
 }
 
 #gem-imgs > img:hover {
@@ -56,7 +75,7 @@ h1 {
 	line-height: 45px;
 	background-color: #ccc;
 	border-radius: 15px;
-	border: double 5px #0f0e10;
+	border: double 5px #051630;
 	color: #000;
 }
 
@@ -66,13 +85,15 @@ h1 {
 	width: 100%;
 	padding-top: 65px;
 	border-radius: 15px;
-	border: double 5px #0f0e10;
+	border: double 5px #051630;
 	color: #000;
 	text-align: center;
 	font-size: 60px;
 	font-weight: bold;
 }
 
-#random-match-display {	background-color: #8c1be2;  } 
+#random-match-display {	background-color: #f4c842;  } 
 
-#user-score {  background-color: #08676b  }  
+#user-score {  background-color: #8c1be2;  }  
+
+#announce { text-decoration: underline; }
