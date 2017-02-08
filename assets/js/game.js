@@ -36,8 +36,8 @@
 			return Math.floor(Math.random() * (max - min + 1)) + min;		
 		},
 
-		// Fx: Do this when user clicks a gem
-		gemUp: function (gem) {
+		// Fx: When a user clicks a gem. identify gem
+		gemId: function (gem) {
 			this.userScore += gem;
 			return this.userScore;
 			console.log("User Score is " + userScore);
@@ -54,26 +54,28 @@ $(document).ready(function() {
 
 
 	//@TODO: Assign data-vals to each gem
-		// '<div data-gem="' + aquamarine + '"' + "></div>"
-		// '<div data-gem="' + emerald + '"'></div>
-		// '<div data-gem="' + ruby + '"'></div>
-		// '<div data-gem="' + topaz + '"'></div>
+		$("#aquamarine").attr("data-gem", aquamarine);
+		$("#emerald").attr("data-gem", emerald);
+		$("#ruby").attr("data-gem", ruby);
+		$("#topaz").attr("data-gem", topaz);
+
+		//(parseInt($(this).data("cup")))
 
 	// Define what happens when a user clicks a gem
 	$(".gem").on("click", function(){
 		// Clear You Win / You Lose after restart
 		$("#announce").empty();
 		
+		// Add gem value to userScore
+		userScore += parseInt($(this).data("gem"));
+		console.log("User Score after 1st click is: " + userScore);
+
 		//Display Match-Target & User Score values
 		$("#random-match-display").html(matchThis);
 		console.log("matchThis is " + matchThis);
 		$("#user-score").html(userScore);
 		console.log("userScore at this point should be 0: " + userScore);
 
-		// Add gem value to userScore
-		userScore += ruby;
-		console.log("User Score after 1st click is: " + userScore);
-		
 		// Check if the user score is >= Match-Target
 		if (userScore === matchThis) {
 			console.log("winCount before ++: " + game.winCount);
