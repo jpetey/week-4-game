@@ -49,8 +49,6 @@ $(document).ready(function() {
 		$("#ruby").attr("data-gem", ruby);
 		$("#topaz").attr("data-gem", topaz);
 
-		//(parseInt($(this).data("cup")))
-
 	// Define what happens when a user clicks a gem
 	$(".gem").on("click", function(){
 		// Clear You Win / You Lose after restart
