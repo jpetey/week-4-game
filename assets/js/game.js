@@ -27,6 +27,8 @@
 			topaz = this.getRandom(1,12);	
 				console.log("topaz is " + topaz);
 			userScore = 0;
+
+
 		},
 
 		// Fx: Randomly assign number, given a min & max value
@@ -49,32 +51,49 @@ $(document).ready(function() {
 	// Assign random numbers to match-target & gems
 	game.initialize();
 
-	//Display Match-Target & User Score values
-	$("#random-match-display").text(game.matchThis);
-	console.log("matchThis is " + matchThis);
-	$("#user-score").text(game.userScore);
+
 
 	//@TODO: Assign data-vals to each gem
-		// '<div data-gem="' + aquamarine + '"'></div>
+		// '<div data-gem="' + aquamarine + '"' + "></div>"
 		// '<div data-gem="' + emerald + '"'></div>
 		// '<div data-gem="' + ruby + '"'></div>
 		// '<div data-gem="' + topaz + '"'></div>
 
 	// Define what happens when a user clicks a gem
-	$("#gem").on("click", function(){
-		// Pull data-gem value, convert to int, run gemUp
-		game.gemUp(parseInt($(this).data("gem")));
+	$(".gem").on("click", function(){
+		// Clear You Win / You Lose after restart
+		$("#announce").empty();
+		
+		//Display Match-Target & User Score values
+		$("#random-match-display").html(matchThis);
+		console.log("matchThis is " + matchThis);
+		$("#user-score").html(userScore);
+		console.log("userScore at this point should be 0: " + userScore);
+
+		console.log("Ruby after click: " + ruby);
+		// Add gem value to userScore
+		userScore += ruby;
+		console.log("User Score after 1st click is: " + userScore);
+		
 		// Check if the user score is >= Match-Target
 		if (userScore === matchThis) {
-			alert("You Win!");
-			winCount++;
-			$("#win-count").text(game.winCount);
+			console.log("winCount before ++: " + game.winCount);
+			game.winCount++;
+			console.log("winCount after ++: " + game.winCount);
+			
+			$("#announce").html("YOU WIN!");			
+			$("#win-display").text(game.winCount);
+			
 			game.initialize();
+		
 		} else if (userScore > matchThis) {
-			alert("You Lose!");
-			loseCount++;
-			$("#lose-count").text(game.loseCount);
-			$("#win-count").text(game.winCount);
+			console.log("winCount before ++: " + game.loseCount);	
+			game.loseCount++;
+			console.log("winCount before ++: " + game.loseCount);	
+
+			$("#announce").html("YOU LOSE!");
+			$("#loss-display").html(game.loseCount);
+			
 			game.initialize();
 		}
 	});
