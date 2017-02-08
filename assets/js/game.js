@@ -27,8 +27,6 @@
 			topaz = this.getRandom(1,12);	
 				console.log("topaz is " + topaz);
 			userScore = 0;
-
-
 		},
 
 		// Fx: Randomly assign number, given a min & max value
@@ -36,12 +34,6 @@
 			return Math.floor(Math.random() * (max - min + 1)) + min;		
 		},
 
-		// Fx: When a user clicks a gem. identify gem
-		gemId: function (gem) {
-			this.userScore += gem;
-			return this.userScore;
-			console.log("User Score is " + userScore);
-		},
 	}
 
 
@@ -51,9 +43,7 @@ $(document).ready(function() {
 	// Assign random numbers to match-target & gems
 	game.initialize();
 
-
-
-	//@TODO: Assign data-vals to each gem
+	// Assign data-vals to each gem
 		$("#aquamarine").attr("data-gem", aquamarine);
 		$("#emerald").attr("data-gem", emerald);
 		$("#ruby").attr("data-gem", ruby);
