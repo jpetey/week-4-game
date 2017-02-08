@@ -70,7 +70,6 @@ $(document).ready(function() {
 		$("#user-score").html(userScore);
 		console.log("userScore at this point should be 0: " + userScore);
 
-		console.log("Ruby after click: " + ruby);
 		// Add gem value to userScore
 		userScore += ruby;
 		console.log("User Score after 1st click is: " + userScore);
